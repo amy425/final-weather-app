@@ -1,0 +1,110 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #1a1c20;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+h1,
+h2,
+h3,
+a {
+  text-align: center;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#current-location {
+  margin-bottom: 5px;
+}
+
+#forecast {
+  margin-bottom: 5px;
+}
+
+#forecast-details {
+  text-align: center;
+}
+
+#search {
+  margin-bottom: 5px;
+}
+
+#city {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#city h1 {
+  margin-top: 8px;
+}
+
+#todays-temperature {
+  margin: 5px auto;
+}
+
+#top-section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#today-title p {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.weekday-title {
+  background-color: #f4f4f4;
+  margin: 5px 20px 0px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.weekday-info {
+  background-color: #f4f4f4;
+  margin: 0px 20px 5px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.weekday-info img {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weekday-high {
+  background-color: #cf7500;
+  margin-bottom: 0px;
+  border-radius: 0px 0px 4px 0px;
+}
+
+.weekday-low {
+  background-color: #f0a500;
+  margin-bottom: 0px;
+}
+
+.weekday-high p {
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.weekday-low p {
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+#todays-icon img {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto;
+}
