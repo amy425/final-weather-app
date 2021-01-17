@@ -10,6 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
     </style>
     <link rel="stylesheet" href="src/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
@@ -17,16 +18,15 @@
     <div class="app">
     
         <div class="row" id="top-section">
-            <div class="col-6" id="city">
-                <h1>
+            <div class="col-6">
+                <h1 id="city">
                     Paris
                 </h1>
             </div>
             <div class="col-3" id="todays-temperature">
                 <div id="today-values">
-                    <div class="row" id="temperature-value">
-                        <h2>
-                            21
+                    <div class="row">
+                        <h2 id="todays-temperature-value">
                         </h2>
                     </div>
                     <div class="row" id="today-title">
@@ -68,7 +68,7 @@
             <div class="col-4" id="todays-details">
                 <ul>
                     <li>
-                        Conditions: <span id="wind-speed"></span>Sunny
+                        Conditions: <span id="conditions"></span>
                     </li>
                     <li>
                         Humidity: <span id="humidity"></span>%

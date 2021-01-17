@@ -49,6 +49,10 @@ a {
   margin-top: 8px;
 }
 
+#conditions {
+  text-transform: capitalize;
+}
+
 #todays-temperature {
   margin: 5px auto;
 }
