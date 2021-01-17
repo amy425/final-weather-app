@@ -20,7 +20,6 @@
         <div class="row" id="top-section">
             <div class="col-6">
                 <h1 id="city">
-                    Paris
                 </h1>
             </div>
             <div class="col-3" id="todays-temperature">
@@ -57,10 +56,13 @@
             <div class="col-4" id="todays-details">
                 <ul>
                     <li>
-                        <span id="date">Mon</span>
+                        <span id="date"></span>
                     </li>
                     <li>
-                        <span id="today-time">12:00</span>
+                        <span id="today-time"></span>
+                    </li>
+                    <li>
+                        <span id="conditions"></span>
                     </li>
                 </ul>
             </div>
@@ -68,7 +70,7 @@
             <div class="col-4" id="todays-details">
                 <ul>
                     <li>
-                        <span id="conditions"></span>
+                        Feels Like: <span id="feels-like"></span>°
                     </li>
                     <li>
                         Humidity: <span id="humidity"></span>%
@@ -97,164 +99,42 @@
     
                         <div>
     
+
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Tue
-                                        </p>
+                                
+                                <div class="col" id="one">
+                                    
+                                    <div class="row">
+                                        <div class="col-8" id="date-plus-one"><span id="day-one">Monday</span></div>
+                                        <div class="col-4 weekday-low">A</div>
                                     </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
+
+                                    <div class="row">
+                                        <div class="col-8"><span id="temp-plus-one"></span></div>
+                                        <div class="col-4 weekday-high">B</div>
                                     </div>
+
                                 </div>
-    
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Wed
-                                        </p>
+
+                                <div class="col" id="two">
+                                
+                                    <div class="row">
+                                        <div class="col-8" id="date-plus-two">T</div>
+                                        <div class="col-4 weekday-low">A</div>
                                     </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
+                                
+                                    <div class="row">
+                                        <div class="col-8" id="temp-plus-two"></div>
+                                        <div class="col-4 weekday-high">B</div>
                                     </div>
+                                
                                 </div>
-    
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Thu
-                                        </p>
-                                    </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
+
+                            
     
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Fri
-                                        </p>
-                                    </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Sat
-                                        </p>
-                                    </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="col-4">
-                                    <div class="row weekday-title">
-                                        <p>
-                                            Sun
-                                        </p>
-                                    </div>
-                                    <div class="row weekday-info">
-                                        <div class="col-8">
-                                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                                alt="Partly cloudy">
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row weekday-low">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                            <div class="row weekday-high">
-                                                <p>
-                                                    0°
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
     
                         </div>
