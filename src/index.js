@@ -1,3 +1,46 @@
+function formatTime(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    if (hours < 10) {
+        hours = `0${hour}`;
+}
+
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+}
+
+    let days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+    ];
+
+    let day = days[date.getDay()];
+    return `${hours}:${minutes}`
+}
+
+function formatDate(timestamp) {
+    let date = new Date(timestamp);
+
+    let days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+    ];
+
+    let day = days[date.getDay()];
+    return `${day}`
+}
+
 function getTemp(response) {
     
     let searchCityTempValue = Math.round(response.data.main.temp);
@@ -25,6 +68,16 @@ function getTemp(response) {
     let searchCityWindSpeedElement = document.querySelector("#wind-speed");
     searchCityWindSpeedElement.innerHTML = `${searchCityWindSpeedValue}`;
     console.log(`${searchCityWindSpeedValue}`);
+
+    let searchCityDateValue = formatTime(response.data.dt * 1000);
+    let searchCityDateElement = document.querySelector("#today-time");
+    searchCityDateElement.innerHTML = `${searchCityDateValue}`;
+    console.log(`${searchCityDateValue}`);
+
+    let searchCityTimeValue = formatDate(response.data.dt * 1000);
+    let searchCityTimeElement = document.querySelector("#date");
+    searchCityTimeElement.innerHTML = `${searchCityTimeValue}`;
+    console.log(`${searchCityTimeValue}`);
 }
 
 let apiKey = "4581002eb6d6effa90c6392584a38b4b";

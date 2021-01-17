@@ -5,6 +5,7 @@ body {
 
 li {
   list-style: none;
+  display: block;
 }
 
 ul {
@@ -49,7 +50,7 @@ a {
   margin-top: 8px;
 }
 
-#conditions {
+li:first-letter {
   text-transform: capitalize;
 }
 
