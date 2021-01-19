@@ -10,6 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
     </style>
     <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/e061d0a226.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
     
         <div class="row" id="top-section">
             
-            <div class="col-6">
+            <div class="col-6" id="todays-values">
                 <h1 id="city">
                 </h1>
                     <br/>
@@ -27,19 +28,15 @@
                 </h2>
             </div>
             
-            <div class="col-6" id="todays-temperature">
-                <div id="todays-icon">
-                    <div class="row">
+            <div class="col-6" id="todays-icon">
                         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
-                    </div>
-                </div>
             </div>
     
         </div>
 
         <hr />
     
-        <div class="row" id="todays-details">
+        <div class="row" id="todays-info">
 
             <div class="col-6">
                 <ul>
@@ -74,23 +71,23 @@
         <hr />
 
         <div class="search">
-            <form id="search-feature">
+            <form id="search">
                 <input type="text" placeholder="Enter a city here..." autocomplete="off" id="search-bar-text" />
                 <input id="search-button" type="submit" value="Search" />
             </form>
         </div>
         
-        <div class="current">
-            <div class="d-grid gap-2 col-12 mx-auto" id="current-location">
-                <button class="btn btn-primary" type="button">Current Location</button>
+        <div>
+            <div class="d-grid gap-2 col-12 mx-auto">
+                <button class="btn btn-primary" id="current" type="button">Current Location <i class="fas fa-location-arrow" id="location"></i></button>
             </div>
         </div>
     
     
-        <div class="accordion" id="forecast">
+        <div class="accordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    <button class="accordion-button" id="forecast" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                         aria-expanded="true" aria-controls="collapseOne">
                         Weekly Forecast
                     </button>
@@ -142,14 +139,18 @@
     </div>
 
         <nav class="fixed-bottom">
-            <div class="container-fluid">
+            
                 <div class="btn-group col-12 btn-group-lg" role="group" aria-label="Unit converter">
-                    <button type="button" class="btn btn-secondary rounded-0 active" data-bs-toggle="button" aria-pressed="true"><a
-                            id="celsius-link" href="#">°C</a></button>
-                    <button type="button" class="btn btn-secondary rounded-0" data-bs-toggle="button"><a id="fahrenheit-link"
-                            href="#">°F</a></button>
+                    <button type="button" class="btn btn-secondary rounded-0 active" href="#" data-bs-toggle="button" aria-pressed="true" id="celsius-link">°C</button>
+                    <button type="button" class="btn btn-secondary rounded-0" href="#" data-bs-toggle="button" id="fahrenheit-link">°F</button>
                 </div>
-            </div>
+
+                <div id="footer">
+                    <p id="footer-text">Coded by Amy </p>
+                    <i class="fab fa-github footer-icon"></i>
+                    
+                </div>
+            
         </nav>
         
 

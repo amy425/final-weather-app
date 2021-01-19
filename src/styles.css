@@ -24,16 +24,21 @@ a {
   margin: 0 auto;
 }
 
-#current-location {
+#current {
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 #forecast {
+  background-color: #000;
+  color: #fff;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 #search {
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 #city {
@@ -50,55 +55,15 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-#todays-temperature {
-  margin: 5px auto;
-}
-
 #top-section {
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-#today-title p {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-}
-
-.weekday-high {
-  background-color: #cf7500;
-  margin-bottom: 0px;
-  border-radius: 0px 0px 4px 0px;
-}
-
-.weekday-low {
-  background-color: #f0a500;
-  margin-bottom: 0px;
-  border-radius: 0px 4px 0px 0px;
-}
-
-.weekday-high p {
-  color: #fff;
-  margin-bottom: 0px;
-}
-
-.weekday-low p {
-  color: #fff;
-  margin-bottom: 0px;
 }
 
 #todays-icon img {
   max-width: 100px;
   display: block;
   margin: 0 auto;
-  border-radius: 4px;
-}
-
-.weekday-title p {
-  color: #fff;
-  font-size: 20px;
-  text-align: left;
-  margin-left: 5px;
 }
 
 #day-one,
@@ -122,8 +87,20 @@ li:first-letter {
   max-width: 250px;
 }
 
-#celsius-link,
-#fahrenheit-link {
+#footer {
+  background-color: #000;
   color: #fff;
-  text-decoration: none;
+  font-size: 10px;
+  margin-bottom: 0;
+  padding: 12px 5px 12px 0;
+  text-align: right;
+}
+
+.footer-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+#footer-text {
+  margin-bottom: 5px;
 }
