@@ -18,42 +18,30 @@
     <div class="app">
     
         <div class="row" id="top-section">
+            
             <div class="col-6">
                 <h1 id="city">
                 </h1>
+                    <br/>
+                <h2 id="todays-temperature-value">
+                </h2>
             </div>
-            <div class="col-3" id="todays-temperature">
-                <div id="today-values">
+            
+            <div class="col-6" id="todays-temperature">
+                <div id="todays-icon">
                     <div class="row">
-                        <h2 id="todays-temperature-value">
-                        </h2>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
                     </div>
-                    <div class="row" id="today-title">
-                        <p>
-                            Today
-                        </p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="col-1" id="todays-temperature">
-                <div class="row" id="todays-celsius">
-                    <a id="celsius-link" href="#">°C</a>
-                </div>
-                <div class="row" id="todays-fahrenheit">
-                    <a id="fahrenheit-link" href="#">°F</a>
                 </div>
             </div>
     
         </div>
+
+        <hr />
     
         <div class="row" id="todays-details">
-    
-            <div class="col-4" id="todays-icon">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
-            </div>
-    
-            <div class="col-4" id="todays-details">
+
+            <div class="col-6">
                 <ul>
                     <li>
                         <span id="date"></span>
@@ -67,7 +55,7 @@
                 </ul>
             </div>
 
-            <div class="col-4" id="todays-details">
+            <div class="col-6">
                 <ul>
                     <li>
                         Feels Like: <span id="feels-like"></span>°
@@ -82,6 +70,8 @@
             </div>
     
         </div>
+
+        <hr />
 
         <div class="search">
             <form id="search-feature">
@@ -112,36 +102,28 @@
     
                         <div>
     
+                            
                             <div class="row">
-                                
-                                <div class="col" id="one">
-                                    
-                                    <div class="row">
-                                        <div class="col-8" id="date-plus-one"><span id="day-one">Monday</span></div>
-                                        <div class="col-4 weekday-low">A</div>
+                                <div class ="col-6">
+                                    <div class="card bg-dark text-white border-0">
+                                        <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-img rounded-3" alt="Partly cloudy">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title"><span id="day-one">Monday</span></h5>
+                                            <p class="card-text"><span id="temp-plus-one"></span></p>
+                                        </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-8"><span id="temp-plus-one"></span></div>
-                                        <div class="col-4 weekday-high">B</div>
-                                    </div>
-
                                 </div>
 
-                                <div class="col" id="two">
-                                
-                                    <div class="row">
-                                        <div class="col-8" id="date-plus-two">T</div>
-                                        <div class="col-4 weekday-low">A</div>
+                                <div class="col-6">
+                                    <div class="card bg-dark text-white border-0">
+                                        <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                                            class="card-img rounded-3" alt="Partly cloudy">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title"><span id="day-two">Tuesday</span></h5>
+                                            <p class="card-text"><span id="temp-plus-two"></span></p>
+                                        </div>
                                     </div>
-                                
-                                    <div class="row">
-                                        <div class="col-8" id="temp-plus-two"></div>
-                                        <div class="col-4 weekday-high">B</div>
-                                    </div>
-                                
                                 </div>
-
                             </div>
 
                             
@@ -157,6 +139,13 @@
         </div>
     
     
+    </div>
+
+        <div class="btn-group col-12 btn-group-lg" role="group" aria-label="Unit converter">
+            <button type="button" class="btn btn-secondary rounded-0 active" data-bs-toggle="button" aria-pressed="true"><a id="celsius-link" href="#">°C</a></button>
+            <button type="button" class="btn btn-secondary rounded-0" data-bs-toggle="button"><a id="fahrenheit-link" href="#">°F</a></button>
+        </div>
+
     </div>
 
     <script src="src/index.js"></script>

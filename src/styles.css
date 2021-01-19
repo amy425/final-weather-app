@@ -32,10 +32,6 @@ a {
   margin-bottom: 5px;
 }
 
-#forecast-details {
-  text-align: center;
-}
-
 #search {
   margin-bottom: 5px;
 }
@@ -67,14 +63,6 @@ li:first-letter {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0px;
-}
-
-#one,
-#two {
-  padding: 101px 12px;
-  background-image: url(https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
-  border-radius: 10px;
-  margin: 5px;
 }
 
 .weekday-high {
@@ -114,9 +102,28 @@ li:first-letter {
 }
 
 #day-one,
-#temp-plus-one {
+#day-two {
   color: #fff;
   font-size: 30px;
   font-weight: 200;
+  line-height: 1;
   text-transform: uppercase;
+}
+
+#temp-plus-one,
+#temp-plus-two {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.card {
+  max-width: 250px;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  color: #fff;
+  text-decoration: none;
 }
