@@ -23,6 +23,11 @@ h2 {
   font-size: 60px;
 }
 
+h3 {
+  font-size: 90px;
+  line-height: 1;
+}
+
 .app {
   max-width: 640px;
   margin: 0 auto;
@@ -40,7 +45,7 @@ h2 {
   margin-top: 5px;
 }
 
-#search {
+#search-feature {
   margin-bottom: 5px;
   margin-top: 5px;
 }

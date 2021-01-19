@@ -100,3 +100,27 @@ let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&units=${units}`;
 
 axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTodayInfo);
+
+//Change to Fahrenheit - add stop
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  let currentLocationTemp = document.querySelector(".temp");
+  currentLocationTemp.innerHTML = Math.round(
+    (currentLocationTemp.innerHTML * 9) / 5 + 32
+  );
+}
+
+//Change to Celsius - add stop
+function changeToCelsius(event) {
+  event.preventDefault();
+  let currentLocationTemp = document.querySelector(".temp");
+  currentLocationTemp.innerHTML = Math.round(
+    ((currentLocationTemp.innerHTML - 32) * 5) / 9
+  );
+}
+
+let fahrenheitTemp = document.querySelector("#fahrenheit-link");
+fahrenheitTemp.addEventListener("click", changeToFahrenheit);
+
+let celsiusTemp = document.querySelector("#celsius-link");
+celsiusTemp.addEventListener("click", changeToCelsius);

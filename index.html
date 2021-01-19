@@ -21,7 +21,7 @@
         <div class="row align-items-center" id="top-section">
             
             <div class="col-4">
-                <h1 id="city">
+                <h1><span id="city"></span>
                 </h1>
             </div>
             
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-4">
-                <h2><span id="todays-temperature-value"></span>°</h2>
+                <h2><span id="todays-temperature-value" class="temp"></span>°</h2>
             </div>
     
         </div>
@@ -72,9 +72,9 @@
         <hr />
 
         <div class="search">
-            <form id="search">
-                <input type="text" placeholder="Enter a city here..." autocomplete="off" id="search-bar-text" />
-                <input id="search-button" type="submit" value="Search" />
+            <form id="search-feature">
+                <input type="text" placeholder="Enter a city" autocomplete="off" id="search-bar-text"/>
+                <input type="submit" value="Search" id="search-button"/>
             </form>
         </div>
         
@@ -106,19 +106,19 @@
                                     <div class="card bg-dark text-white border-0">
                                         <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-img rounded-3" alt="Partly cloudy">
                                         <div class="card-img-overlay">
-                                            <h5 class="card-title"><span id="day-one">Monday</span></h5>
-                                            <p class="card-text"><span id="temp-plus-one"></span></p>
+                                            <h3 class="card-title"><span id="day-one">Monday</span></h3>
+                                            <p class="card-text"><span id="temp-plus-one" class="temp"></span>°</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-6">
                                     <div class="card bg-dark text-white border-0">
-                                        <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                                        <img src="https://images.unsplash.com/photo-1563630381190-77c336ea545a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3VufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                                             class="card-img rounded-3" alt="Partly cloudy">
                                         <div class="card-img-overlay">
-                                            <h5 class="card-title"><span id="day-two">Tuesday</span></h5>
-                                            <p class="card-text"><span id="temp-plus-two"></span></p>
+                                            <h3 class="card-title"><span id="day-two">Tuesday</span></h3>
+                                            <p class="card-text"><span id="temp-plus-two" class="temp"></span>°</p>
                                         </div>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@
                 </div>
 
                 <div id="footer">
-                    <p id="footer-text">Coded by Amy | <a href="https://github.com/amysteel/final-weather-app">GitHub</a> | <a href="https://sharp-montalcini-6f47d3.netlify.app/">Netlify</a></p>
+                    <p id="footer-text">Coded by Amy | <a href="https://github.com/amysteel/final-weather-app" target="_blank">GitHub</a> | <a href="https://sharp-montalcini-6f47d3.netlify.app/" target="_blank">Netlify</a></p>
                     
                 </div>
             
