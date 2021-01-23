@@ -69,14 +69,14 @@ li:first-letter {
   margin-bottom: 5px;
 }
 
-#todays-icon img {
+#todays-icon {
   max-width: 100px;
   display: block;
   margin: 0 auto;
 }
 
-#day-one,
-#day-two {
+#second-day,
+#third-day {
   color: #fff;
   font-size: 30px;
   font-weight: 200;

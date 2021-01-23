@@ -17,9 +17,9 @@ function formatDate(timestamp) {
 
 function formatTime(timestamp) {
     let date = new Date(timestamp);
-    let hours = date.getHours();
-    if (hours < 10) {
-        hours = `0${hours}`;
+    let hour = date.getHours();
+    if (hour < 10) {
+        hour = `0${hour}`;
 }
 
     let minutes = date.getMinutes();
@@ -27,33 +27,27 @@ function formatTime(timestamp) {
         minutes = `0${minutes}`;
 }
 
-    let days = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat"
-    ];
-
-    let day = days[date.getDay()];
-    return `${hours}:${minutes}`
+    return `${hour}:${minutes}`
 }
 
 function displayTodayInfo(response) {
 
     console.log(`${apiUrl}&appid=${apiKey}`);
     
-    let searchCityTempValue = Math.round(response.data.list[0].main.temp);
-    let searchCityTempElement = document.querySelector("#todays-temperature-value");
-    searchCityTempElement.innerHTML = `${searchCityTempValue}`;
-    console.log(`${searchCityTempValue}`);
-
+    //Today's info
     let searchCityNameValue = response.data.city.name;
     let searchCityNameElement = document.querySelector("#city");
     searchCityNameElement.innerHTML = `${searchCityNameValue}`;
     console.log(`${searchCityNameValue}`);
+
+    let iconElement = document.querySelector("#todays-icon");
+    iconElement.setAttribute("src", "clouds.jpg");
+    iconElement.setAttribute("alt", response.data.list[0].weather[0].description);
+
+    let searchCityTempValue = Math.round(response.data.list[0].main.temp);
+    let searchCityTempElement = document.querySelector("#todays-temperature-value");
+    searchCityTempElement.innerHTML = `${searchCityTempValue}`;
+    console.log(`${searchCityTempValue}`);
 
     let searchCityConditionsValue = response.data.list[0].weather[0].description;
     let searchCityConditionsElement = document.querySelector("#conditions");
@@ -75,6 +69,8 @@ function displayTodayInfo(response) {
     searchCityWindSpeedElement.innerHTML = `${searchCityWindSpeedValue}`;
     console.log(`${searchCityWindSpeedValue}`);
 
+
+    //Today's date & time
     let searchCityTimeValue = formatDate(response.data.list[0].dt * 1000);
     let searchCityTimeElement = document.querySelector("#date");
     searchCityTimeElement.innerHTML = `${searchCityTimeValue}`;
@@ -82,22 +78,35 @@ function displayTodayInfo(response) {
     let searchCityDateValue = formatTime(response.data.list[0].dt * 1000);
     let searchCityDateElement = document.querySelector("#today-time");
     searchCityDateElement.innerHTML = `${searchCityDateValue}`;
+    
 
-    let searchCityDayOneValue = Math.round(response.data.list[8].main.temp);
+    //Day 2
+    let secondWeekday = formatDate(response.data.list[9].dt * 1000);
+    let secondWeekdayElement = document.querySelector("#second-day");
+    secondWeekdayElement.innerHTML = `${secondWeekday}`;
+
+    let searchCityDayOneValue = Math.round(response.data.list[9].main.temp);
     let searchCityDayOneElement = document.querySelector("#temp-plus-one");
     searchCityDayOneElement.innerHTML = `${searchCityDayOneValue}`;
     console.log(`${searchCityDayOneValue}`);
 
-    let searchCityDayTwoValue = Math.round(response.data.list[16].main.temp);
-    let searchCityDayTwoElement = document.querySelector("#temp-plus-two");
-    searchCityDayTwoElement.innerHTML = `${searchCityDayTwoValue}`;
-    console.log(`${searchCityDayTwoValue}`);
+
+    //Day 3
+    let thirdWeekday = formatDate(response.data.list[18].dt * 1000);
+    let thirdWeekdayElement = document.querySelector("#third-day");
+    thirdWeekdayElement.innerHTML = `${thirdWeekday}`;
+
+    let searchCityDayThreeValue = Math.round(response.data.list[18].main.temp);
+    let searchCityDayThreeElement = document.querySelector("#temp-plus-two");
+    searchCityDayThreeElement.innerHTML = `${searchCityDayThreeValue}`;
+    console.log(`${searchCityDayThreeValue}`);
 
 }
  
-let apiKey = "4581002eb6d6effa90c6392584a38b4b";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&units=${units}`;
+let apiKey = `4581002eb6d6effa90c6392584a38b4b`;
+let city = `Sydney`;
+let units = `metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}`;
 
 axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTodayInfo);
 
