@@ -25,7 +25,7 @@
             </div>
             
             <div class="col-4">
-                        <img src="" alt="Partly cloudy" id="todays-icon">
+                <img src="" alt="" id="todays-icon">
             </div>
 
             <div class="col-4">
@@ -70,17 +70,21 @@
 
         <hr />
 
-        <div class="search">
+        <div id="search">
             <form id="search-feature">
-                <input type="text" placeholder="Enter a city" autocomplete="off" id="search-bar-text"/>
-                <input type="submit" value="Search" id="search-button"/>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Enter a city..." autocomplete="off" class="form-control" id="search-bar"/>
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" value="Search" id="search-button" class="btn btn-primary w-100"/>
+                    </div>
+                    <div class="col-3 d-grid gap-2 mx-auto">
+                        <button class="btn btn-primary" id="current" type="button">Current <i class="fas fa-location-arrow"
+                                id="location"></i></button>
+                    </div>
+                </div>
             </form>
-        </div>
-        
-        <div>
-            <div class="d-grid gap-2 col-12 mx-auto">
-                <button class="btn btn-primary" id="current" type="button">Current Location <i class="fas fa-location-arrow" id="location"></i></button>
-            </div>
         </div>
     
     

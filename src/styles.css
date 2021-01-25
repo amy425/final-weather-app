@@ -33,21 +33,11 @@ h3 {
   margin: 0 auto;
 }
 
-#current {
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
 #forecast {
   background-color: #000;
   color: #fff;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-#search-feature {
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 8px;
+  margin-top: 16px;
 }
 
 #city {
@@ -70,7 +60,7 @@ li:first-letter {
 }
 
 #todays-icon {
-  max-width: 100px;
+  max-width: 64px;
   display: block;
   margin: 0 auto;
 }

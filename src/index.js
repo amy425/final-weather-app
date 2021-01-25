@@ -31,8 +31,6 @@ function formatTime(timestamp) {
 }
 
 function displayTodayInfo(response) {
-
-    console.log(`${apiUrl}&appid=${apiKey}`);
     
     //Today's info
     let searchCityNameValue = response.data.city.name;
@@ -41,7 +39,7 @@ function displayTodayInfo(response) {
     console.log(`${searchCityNameValue}`);
 
     let iconElement = document.querySelector("#todays-icon");
-    iconElement.setAttribute("src", "clouds.jpg");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.list[0].weather[0].description);
 
     let searchCityTempValue = Math.round(response.data.list[0].main.temp);
@@ -103,12 +101,24 @@ function displayTodayInfo(response) {
 
 }
  
-let apiKey = `4581002eb6d6effa90c6392584a38b4b`;
-let city = `Sydney`;
-let units = `metric`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}`;
 
-axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTodayInfo);
+
+function citySearch(city) {
+  let apiKey = `4581002eb6d6effa90c6392584a38b4b`;
+  let units = `metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}`;
+
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTodayInfo);
+}
+
+function search(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-bar");
+  citySearch(searchInput.value);
+}
+
+let form = document.querySelector("#search-feature");
+form.addEventListener("submit", search);
 
 //Change to Fahrenheit - add stop
 function changeToFahrenheit(event) {
