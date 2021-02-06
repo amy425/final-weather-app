@@ -23,7 +23,6 @@ ul {
 
 h1,
 h2,
-h3,
 a {
   text-align: center;
   line-height: 1;
@@ -42,10 +41,23 @@ h2 {
 h3 {
   font-size: 16px;
   margin-bottom: 5px;
+  line-height: 1;
+  font-weight: 600;
 }
 
 hr {
   margin: 0 0 5px 0;
+}
+
+#button-section .btn-secondary {
+  background-color: #dfd3c3 !important;
+  border-color: #dfd3c3 !important;
+}
+
+#button-section .active {
+  background-color: #c7b198 !important;
+  border-color: #c7b198 !important;
+  color: #393e46;
 }
 
 .mobile {
@@ -81,6 +93,10 @@ hr {
   padding: 5px 0px;
 }
 
+.carousel-caption {
+  top: 9px;
+}
+
 .carousel-item img {
   max-height: 150px;
 }
@@ -113,7 +129,7 @@ li:first-letter {
 }
 
 #forecast-section img {
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
 #location-section {
