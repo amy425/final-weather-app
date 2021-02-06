@@ -16,148 +16,167 @@
 <body>
 
 <div class="container">
-    <div class="app">
-    
-        <div class="row align-items-center" id="top-section">
+    <div class="mobile">
+        <div id="app">
+
+            <div id="search">
+                <form id="search-feature">
             
-            <div class="col-4">
-                <h1 id="city"></h1>
-            </div>
-            
-            <div class="col-4">
-                <img src="" alt="" id="todays-icon">
-            </div>
-
-            <div class="col-4">
-                <h2><span id="todays-temperature-value" class="temp"></span>°</h2>
-            </div>
-    
-        </div>
-
-        <hr />
-    
-        <div class="row" id="todays-info">
-
-            <div class="col-6">
-                <ul>
-                    <li>
-                        <span id="date"></span>
-                    </li>
-                    <li>
-                        <span id="today-time"></span>
-                    </li>
-                    <li>
-                        <span id="conditions"></span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-6">
-                <ul>
-                    <li>
-                        Feels Like: <span id="feels-like"></span>°
-                    </li>
-                    <li>
-                        Humidity: <span id="humidity"></span>%
-                    </li>
-                    <li>
-                        Wind Speed: <span id="wind-speed"></span>km/h
-                    </li>
-                </ul>
-            </div>
-    
-        </div>
-
-        <hr />
-
-        <div id="search">
-            <form id="search-feature">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="search" placeholder="Enter a city..." autocomplete="off" class="form-control" id="search-bar"/>
-                    </div>
-                    <div class="col-3">
-                        <input type="submit" value="Search" id="search-button" class="btn btn-primary w-100"/>
-                    </div>
-                    <div class="col-3 d-grid gap-2 mx-auto">
-                        <button class="btn btn-primary" id="current" type="button">Current <i class="fas fa-location-arrow"
-                                id="location"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    
-    
-        <div class="accordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" id="forecast" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Weekly Forecast
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body" id="forecast-details">
-    
-    
-                        <div>
-    
-                            
-                            <div class="row">
-                                <div class ="col-6">
-                                    <div class="card bg-dark text-white border-0">
-                                        <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-img rounded-3" alt="Partly cloudy">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title"><span id="second-day"></span></h3>
-                                            <p class="card-text"><span id="temp-plus-one" class="temp"></span>°</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div class="card bg-dark text-white border-0">
-                                        <img src="https://images.unsplash.com/photo-1563630381190-77c336ea545a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3VufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                                            class="card-img rounded-3" alt="Partly cloudy">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title"><span id="third-day"></span></h3>
-                                            <p class="card-text"><span id="temp-plus-two" class="temp"></span>°</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-    
-                                
-                            </div>
-    
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="search" placeholder="Enter a city..." autocomplete="off" class="form-control form-control-sm"
+                                id="search-bar"/>
                         </div>
-    
+                        <div class="col-4">
+                            <input type="submit" value="Search" id="search-button" class="btn btn-primary w-100 btn-sm"/>
+                        </div>
+                    </div>
+            
+                </form>
+            </div>
+        
+        <div id="main-app">
+
+            <div id="location-section">
+
+                <div class="row align-items-center">
+                    <div class="col-6 offset-md-3">
+                        <h1 id="city"></h1>
+                    </div>
+
+                    <div class="col-2">
+                        <button class="btn btn-primary btn-sm" id="current" type="button"><i class="fas fa-location-arrow"
+                            id="location"></i></button>
                     </div>
                 </div>
+
             </div>
-        </div>
-    
-    
-    </div>
 
-        <nav class="fixed-bottom">
-            
-                <div class="btn-group col-12 btn-group-lg" role="group" aria-label="Unit converter">
-                    <button type="button" class="btn btn-secondary rounded-0 active" href="#" data-bs-toggle="button" aria-pressed="true" id="celsius-link">°C</button>
-                    <button type="button" class="btn btn-secondary rounded-0" href="#" data-bs-toggle="button" id="fahrenheit-link">°F</button>
-                </div>
 
-                <div id="footer">
-                    <p id="footer-text">Coded by Amy | <a href="https://github.com/amysteel/final-weather-app" target="_blank">GitHub</a> | <a href="https://sharp-montalcini-6f47d3.netlify.app/" target="_blank">Netlify</a></p>
+            <div id="top-section">
                     
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <img src="" alt="" id="todays-icon">
+                    </div>
+
+                    <div class="col-6">
+                        <h2><span id="todays-temperature-value" class="temp"></span>°<span class="cfunit"></span></h2>
+                    </div>
                 </div>
-            
-        </nav>
+
+            </div>
+
+
+            <hr />
         
 
+            <div class="row align-items-center" id="todays-info">
+
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            <span id="date"></span>
+                        </li>
+                        <li>
+                            <span id="today-time"></span>
+                        </li>
+                        <li>
+                            <span id="conditions"></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            Feels Like: <span id="feels-like"></span>°<span class="cfunit"></span>
+                        </li>
+                        <li>
+                            Humidity: <span id="humidity"></span>%
+                        </li>
+                        <li>
+                            Wind Speed: <span id="wind-speed"></span>km/h
+                        </li>
+                    </ul>
+                </div>
+        
+            </div>
+
+            <div id="bottom-section">
+
+            <hr />
+        
+            <div id="forecast-section">
+                <h3 id="forecast-title">Weekly Forecast</h3>
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN1bnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100 forecast-image" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3><span id="second-day"></span></h3>
+                                <h2><span id="temp-plus-one" class="temp"></span>°<span class="cfunit"></span></h2>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1574781481375-74a09eba71e1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRodW5kZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3><span id="third-day"></span></h3>
+                                <h2><span id="temp-plus-two" class="temp"></span>°<span class="cfunit"></span></h2>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1525087740718-9e0f2c58c7ef?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDl8fHJhaW58ZW58MHx8MHw%3D&auto=format&fit=crop&w=900&q=60"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3><span id="fourth-day"></span></h3>
+                                <h2><span id="temp-plus-three" class="temp"></span>°<span class="cfunit"></span></h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+
+                </div>
+        
+            </div>
+        
+        
+        </div>
+
+        </div>
+        
+
+            <div class="btn-group col-12" role="group" aria-label="Unit converter" id="button-section">
+                <button type="button" class="btn btn-secondary rounded-0 active" href="#" data-bs-toggle="button"
+                    aria-pressed="true" id="celsius-link">°C</button>
+                <button type="button" class="btn btn-secondary rounded-0" href="#" data-bs-toggle="button"
+                    id="fahrenheit-link">°F</button>
+            </div>
+
+            </div>
+        </div>
     </div>
+
+    <nav class="fixed-bottom">
+        <div id="footer">
+            <p id="footer-text">Coded by Amy | <a href="https://github.com/amysteel/final-weather-app"
+                    target="_blank">GitHub</a> | <a href="https://sharp-montalcini-6f47d3.netlify.app/"
+                    target="_blank">Netlify</a></p>
+        </div>
+    </nav>
 
     <script src="src/index.js"></script>
 </div>

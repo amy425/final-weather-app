@@ -121,8 +121,10 @@ let form = document.querySelector("#search-feature");
 form.addEventListener("submit", search);
 
 //Change to Fahrenheit - add stop
-function changeToFahrenheit(event) {
-  event.preventDefault();
+function changeToFahrenheit() {
+  celsiusTemp.classList.remove("active");
+  let cfUnits = document.querySelector(".cfunit");
+  cfUnits.innerHTML = `F`;
   let currentLocationTemp = document.querySelector(".temp");
   currentLocationTemp.innerHTML = Math.round(
     (currentLocationTemp.innerHTML * 9) / 5 + 32
@@ -130,8 +132,10 @@ function changeToFahrenheit(event) {
 }
 
 //Change to Celsius - add stop
-function changeToCelsius(event) {
-  event.preventDefault();
+function changeToCelsius() {
+  fahrenheitTemp.classList.remove("active");
+  let cfUnits = document.querySelector(".cfunit");
+  cfUnits.innerHTML = `C`;
   let currentLocationTemp = document.querySelector(".temp");
   currentLocationTemp.innerHTML = Math.round(
     ((currentLocationTemp.innerHTML - 32) * 5) / 9
