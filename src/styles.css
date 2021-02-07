@@ -15,54 +15,66 @@ li {
   list-style: none;
   display: block;
   font-size: 12px;
+  text-align: center;
 }
 
 ul {
   padding-left: 0px;
+  padding-top: 8px;
 }
 
 h1,
 h2,
 a {
-  text-align: center;
   line-height: 1;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 5px;
   line-height: 1;
-  font-weight: 600;
 }
 
 hr {
   margin: 0 0 5px 0;
 }
 
-#button-section .btn-secondary {
-  background-color: #dfd3c3 !important;
-  border-color: #dfd3c3 !important;
+#button-section .btn-secondary:hover {
+  background-color: #8bcdcd !important;
+  border-color: #8bcdcd !important;
+  color: #fff !important;
+  transition: 1ms;
 }
 
-#button-section .active {
-  background-color: #c7b198 !important;
-  border-color: #c7b198 !important;
+#button-section .btn-secondary {
+  background-color: #eeeeee !important;
+  border-color: #eeeeee !important;
   color: #393e46;
+}
+
+#button-section .active,
+#button-section .active:hover {
+  background-color: #8bcdcd !important;
+  border-color: #8bcdcd !important;
+  color: #fff !important;
+  pointer-events: none !important;
 }
 
 .mobile {
   max-width: 308px;
-  margin: 20px auto 0px;
+  margin: 15px auto 0px;
   border: solid 1px #29323c;
   border-radius: 30px;
   padding: 0px 10px;
@@ -78,27 +90,16 @@ hr {
   background-color: #fff;
 }
 
-#bottom-section {
-  position: relative;
-  top: -10px;
-}
-
 #main-app {
   padding: 0px 10px;
 }
 
-#intro-bar {
-  background-color: #eeeeee;
-  margin: 0;
-  padding: 5px 0px;
-}
-
 .carousel-caption {
-  top: 9px;
+  top: 30px;
 }
 
 .carousel-item img {
-  max-height: 150px;
+  max-height: 180px;
 }
 
 .standard {
@@ -119,8 +120,9 @@ li:first-letter {
   border-color: #8bcdcd !important;
 }
 
-.col-8 {
-  padding-right: 0px;
+#current {
+  position: relative;
+  right: -15px;
 }
 
 #celsius-link,
@@ -157,6 +159,10 @@ li:first-letter {
   padding: 5px 0px;
 }
 
+#search-feature .col-8 {
+  padding-right: 0px;
+}
+
 #search-bar,
 #search-button {
   font-size: 14px;
@@ -164,8 +170,8 @@ li:first-letter {
 
 #second-day,
 #third-day,
-#temp-plus-one,
-#temp-plus-two {
+#second-day-temp,
+#third-day-temp {
   color: #fff;
   font-weight: 400;
 }
